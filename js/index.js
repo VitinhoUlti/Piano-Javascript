@@ -7,7 +7,7 @@ let Game = {
     main: document.querySelector("main")
   },
   valores: {
-    
+    volume: document.getElementById("ivolume").value
   },
   objetos: {
     audio: new Audio("Tunes")
@@ -15,6 +15,7 @@ let Game = {
 };
 
 const playSom = (tecla) => {
+    Game.objetos.audio.volume = Game.valores.volume
     Game.objetos.audio.src = `./Tunes/${tecla.toLowerCase()}.wav`
     Game.objetos.audio.play()
 }
@@ -28,3 +29,12 @@ for (let i = 0; i < Game.elementos.teclas.length; i++) {
       }
     });
 }
+
+const EscondaTecla = () => {
+  for (let i = 0; i < Game.elementos.teclas.length; i++) {
+    const element = Game.elementos.teclas[i];
+    element.classList.toggle("esconda")
+  }
+}
+
+  Game.elementos.ativo.addEventListener("click", () => EscondaTecla())

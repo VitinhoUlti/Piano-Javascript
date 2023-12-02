@@ -76,3 +76,6 @@ h1, h2, label{
     border-radius: 20px;
     */
 }
+.esconda span{
+    display: none;
+}
