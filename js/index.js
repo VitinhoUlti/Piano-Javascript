@@ -7,7 +7,7 @@ let Game = {
     main: document.querySelector("main")
   },
   valores: {
-    volume: document.getElementById("ivolume").value
+    volume: document.getElementById("ivolume")
   },
   objetos: {
     audio: new Audio("Tunes")
@@ -36,4 +36,8 @@ const EscondaTecla = () => {
   }
 }
 
+const mudarvolume = (e) => {
+  Game.objetos.audio.volume = e.target.value;
+}
   Game.elementos.ativo.addEventListener("click", () => EscondaTecla())
+  Game.valores.volume.addEventListener("input", mudarvolume);
