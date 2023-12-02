@@ -14,7 +14,7 @@ let Game = {
 };
 
 const playSom = (tecla) => {
-    Game.objetos.audio.src = `Tunes/${tecla}.wav`
+    Game.objetos.audio.src = `../Tunes/${tecla}.wav`
     Game.objetos.audio.play()
 }
 
