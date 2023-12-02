@@ -15,7 +15,6 @@ let Game = {
 };
 
 const playSom = (tecla) => {
-    Game.objetos.audio.volume = Game.valores.volume*100
     Game.objetos.audio.src = `./Tunes/${tecla.toLowerCase()}.wav`
     Game.objetos.audio.play()
 }
