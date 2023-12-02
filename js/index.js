@@ -3,7 +3,8 @@ let Game = {
     ativo: document.getElementById("iaudio"),
     teclasBrancas: document.getElementsByClassName("teclabranca"),
     teclasPretas: document.getElementsByClassName("teclapreta"),
-    teclas: document.getElementsByClassName("tecla")
+    teclas: document.getElementsByClassName("tecla"),
+    main: document.querySelector("main")
   },
   valores: {
     
@@ -14,7 +15,7 @@ let Game = {
 };
 
 const playSom = (tecla) => {
-    Game.objetos.audio.src = `../Tunes/${tecla.toLowerCase()}.wav`
+    Game.objetos.audio.src = `./Tunes/${tecla.toLowerCase()}.wav`
     Game.objetos.audio.play()
 }
 
